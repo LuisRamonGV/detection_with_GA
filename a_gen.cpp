@@ -636,62 +636,6 @@ gcIMG *gcNewImg(int ancho,int alto){
    free(img);
   }
 
-// void GA::centro_radio(){
-//     int A[2], B[2], C[2];
-
-//     for(unsigned int k = 0; k < PobSize; k++){ //* Para toda la poblacion 
-//         A[0] = Coorx[Pob[k].Vent[0]];
-//         A[1] = Coory[Pob[k].Vent[0]];
-
-//         B[0] = Coorx[Pob[k].Vent[1]];
-//         B[1] = Coory[Pob[k].Vent[1]];
-
-//         C[0] = Coorx[Pob[k].Vent[2]];
-//         C[1] = Coory[Pob[k].Vent[2]]; 
-
-//         //* Evaluamos que exista el circulo
-//         if((A[0] == B[0] && B[0] == C[0]) || (A[1] == B[1] && B[1] == C[1])){
-//             Pob[k].cx = 0;
-//             Pob[k].cy = 0;
-//             Pob[k].r  = 0;
-//             return; 
-//         }
-
-//         //* Transformacion T
-//         double den = ((B[0] - A[0])*(C[1] - A[1])) - ((C[0]-A[0])*(B[1]-A[1])); 
-//         den *= 4;
-//         // printf("omg: %f", den);
-
-//         double detX =  2*B[0]* pow(C[0], 2) + 2*pow(B[0], 2)*C[1] + 2*pow(B[1], 2)*C[1] - 
-//                     2*pow(B[1], 2)*A[1] - 2*pow(A[0], 2)*C[1] - 2*pow(A[1], 2)*C[1]  -
-//                     2*pow(C[0], 2)*B[1] + 2*pow(C[0], 2)*A[1] - 2*pow(C[1], 2)*B[1] + 
-//                     2*pow(C[1], 2)*A[1] + 2*pow(A[0], 2)*B[1] + 2*pow(A[1], 2)*B[1];
-//         detX /= den;
-//         // printf("\ndetX: %i", detX);
-
-//         double detY =  2*B[0]*pow(C[0], 2) + 2*B[0]*pow(C[1], 2) - 2*B[0]*pow(A[0], 2) - 
-//                     2*B[0]*pow(A[1], 2) - 2*A[0]*pow(C[0], 2) -  2*A[0]*pow(C[1], 2) - 
-//                     2*C[0]*pow(B[0], 2) - 2*C[0]*pow(B[1], 2) + 2*C[0]*pow(A[0], 2) + 
-//                     2*C[0]*pow(A[1], 2) + 2*A[0]*pow(B[0], 2) + 2*A[0]*pow(B[1], 2);
-//         detY /= den;
-//         // printf("\ndetY: %i\n", detY);
-
-//         int radio2 = pow((A[0] - detX), 2) + pow((A[1] - detY), 2);
-//         int radio = sqrt(radio2);
-
-//         Pob[k].cx = detX;
-//         Pob[k].cy = detY;
-//         Pob[k].r  = radio;
-
-//         // printf("\ncx: %f", Pob[k].cx);
-//         // printf("\ncy: %f", Pob[k].cy);
-//         // printf("\nr: %f", Pob[k].r );
-
-//         char a;
-//         // std::cin>>a;
-//     }
-// }
-
 
 void GA::calcular_centro_radio(int k) {
     double A, B, C, D;
